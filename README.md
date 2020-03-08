@@ -62,13 +62,13 @@ The polls in both categories are arranged from the most recently created (top) t
 - 
 1. The details of the poll are available at ```questions/:question_id```.
 2. When a poll is clicked on the home page, the following is shown:
-- the text “Would You Rather”;
-- the picture of the user who posted the polling question; and
-- the two options.
+   - the text “Would You Rather”;
+   - the picture of the user who posted the polling question; and
+   - the two options.
 3. For answered polls, each of the two options contains the following:
-- the text of the option;
-- the number of people who voted for that option;
-- the percentage of people who voted for that option.
+   - the text of the option;
+   - the number of people who voted for that option;
+   - the percentage of people who voted for that option.
 4. The option selected by the logged in user should be clearly marked.
 5. When the user is logged in, the details of the poll are shown. If the user is logged out, he/she is asked to log in before before being able to access the poll.
 6. The application asks the user to sign in and shows a 404 page if that poll does not exist. (In other words, if a user creates a poll and then the same or another user tries to access that poll by its url, the user should be asked to sign in and then be shown a 404 page. Please keep in mind that new polls will not be accessible at their url because of the way the backend is set up in this application.)
@@ -85,10 +85,10 @@ The polls in both categories are arranged from the most recently created (top) t
 - 
 1. The Leaderboard is available at ```/leaderboard```.
 2. Each entry on the leaderboard contains the following:
-- the user’s name;
-- the user’s picture;
-- the number of questions the user asked; and
-- the number of questions the user answered.
+   - the user’s name;
+   - the user’s picture;
+   - the number of questions the user asked; and
+   - the number of questions the user answered.
 3. Users are ordered in descending order based on the sum of the number of questions they’ve answered and the number of questions they’ve asked.
 - The app contains a navigation bar that is visible on all of the pages.
 The user can navigate between the page for creating new polls, and the leaderboard page, and the home page without typing the address into the address bar.

@@ -1,4 +1,5 @@
-import { getInitialData, saveQuestion, saveQuestionAnswer } from '../utils/api';
+import { getInitialData } from '../../api/SharedAPI';
+import { saveQuestion, saveQuestionAnswer } from '../../api/QuestionAPI';
 import { setAuthedUser } from './authedUser';
 import {
     receiveUsers,

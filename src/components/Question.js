@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 class Question extends Component {
     render() {
-        console.log('======>',this.props,'<======');
         return (
             <div>
                 Question

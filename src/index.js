@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux';
-import reducer from './reducers';
-import middleware from './middlewares';
+import reducer from './redux/reducers';
+import middleware from './redux/middlewares';
 import './index.css';
 import App from './components/App';
 

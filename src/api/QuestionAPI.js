@@ -1,12 +1,9 @@
-import {
-    _saveQuestion,
-    _saveQuestionAnswer,
-} from '../utils/data';
-
-export function saveQuestionAnswer(info) {
-    return _saveQuestionAnswer(info);
-};
+import { saveQuestionData, saveQuestionAnswerData } from '../utils/data';
 
 export function saveQuestion(info) {
-    return _saveQuestion(info);
-};
+  return saveQuestionData(info);
+}
+
+export function saveQuestionAnswer(info) {
+  return saveQuestionAnswerData(info);
+}

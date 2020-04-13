@@ -1,7 +1,5 @@
-import { _getUsers,
-    _getQuestions,
-} from '../utils/data';
+import { getUsersData, getQuestionsData } from '../utils/data';
 
-export function getInitialData() {
-    return Promise.all([_getUsers(), _getQuestions()]);
-};
+export default function getInitialData() {
+  return Promise.all([getUsersData(), getQuestionsData()]);
+}

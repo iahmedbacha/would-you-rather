@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { handleInitialData } from '../redux/actions/shared';
-import QuestionList from "./QuestionList";
+import QuestionList from './QuestionList';
 
 class App extends Component {
   componentDidMount() {
@@ -11,21 +11,14 @@ class App extends Component {
 
   render() {
     const { isLoggedIn } = this.props;
-    return (
-      <div className="App">
-        {isLoggedIn
-          ? <QuestionList />
-          : null
-        }
-      </div>
-    );
-  };
-};
+    return <div className="App">{isLoggedIn ? <QuestionList /> : null}</div>;
+  }
+}
 
-function mapStateToProps({authedUser}) {
+function mapStateToProps({ authedUser }) {
   return {
-    isLoggedIn: authedUser !== null
+    isLoggedIn: authedUser !== null,
   };
-};
+}
 
 export default connect(mapStateToProps)(App);

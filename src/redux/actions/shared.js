@@ -1,18 +1,14 @@
 import getInitialData from '../../api/SharedAPI';
 import { saveQuestion, saveQuestionAnswer } from '../../api/QuestionAPI';
-import setAuthedUser from './authedUser';
 import receiveUsers from './users';
 import receiveQuestions from './questions';
 import { ADD_QUESTION, ADD_QUESTION_ANSWER } from '../constants/actionTypes';
-
-const AUTHED_USER = 'sarahedo';
 
 export function handleInitialData() {
   return (dispatch) => {
     return getInitialData().then(([users, questions]) => {
       dispatch(receiveUsers(users));
       dispatch(receiveQuestions(questions));
-      dispatch(setAuthedUser(AUTHED_USER));
     });
   };
 }

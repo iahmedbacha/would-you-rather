@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class NewQuestion extends Component {
+class NewQuestionContainer extends Component {
   render() {
     return <div>New Question</div>;
   }
@@ -13,4 +13,4 @@ function mapStateToProps({ authedUser }) {
   };
 }
 
-export default connect(mapStateToProps)(NewQuestion);
+export default connect(mapStateToProps)(NewQuestionContainer);

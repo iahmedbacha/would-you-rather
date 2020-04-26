@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class UserList extends Component {
+class UserListContainer extends Component {
   render() {
     return <div>User List</div>;
   }
@@ -13,4 +13,4 @@ function mapStateToProps({ users }) {
   };
 }
 
-export default connect(mapStateToProps)(UserList);
+export default connect(mapStateToProps)(UserListContainer);

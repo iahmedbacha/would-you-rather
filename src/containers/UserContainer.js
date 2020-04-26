@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class User extends Component {
+class UserContainer extends Component {
   render() {
     return <div>User</div>;
   }
@@ -13,4 +13,4 @@ function mapStateToProps({ users }, { id }) {
   };
 }
 
-export default connect(mapStateToProps)(User);
+export default connect(mapStateToProps)(UserContainer);

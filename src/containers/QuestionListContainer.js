@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class QuestionList extends Component {
+class QuestionListContainer extends Component {
   render() {
     return <div>Question List</div>;
   }
@@ -22,4 +22,4 @@ function mapStateToProps({ authedUser, questions }) {
   };
 }
 
-export default connect(mapStateToProps)(QuestionList);
+export default connect(mapStateToProps)(QuestionListContainer);

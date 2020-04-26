@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class QuestionPreview extends Component {
+class QuestionPreviewContainer extends Component {
   render() {
     return <div>Question Preview</div>;
   }
@@ -14,4 +14,4 @@ function mapStateToProps({ users, questions }, { id }) {
   };
 }
 
-export default connect(mapStateToProps)(QuestionPreview);
+export default connect(mapStateToProps)(QuestionPreviewContainer);

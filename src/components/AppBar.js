@@ -99,7 +99,7 @@ export default function PrimarySearchAppBar(props) {
         </IconButton>
         <p>Home</p>
       </MenuItem>
-      <MenuItem component={Link} to="/newQuestion">
+      <MenuItem component={Link} to="/add">
         <IconButton aria-label="new question page" color="inherit">
           <AddCircleIcon />
         </IconButton>
@@ -140,7 +140,7 @@ export default function PrimarySearchAppBar(props) {
               </IconButton>
               <p>Home</p>
             </MenuItem>
-            <MenuItem component={Link} to="/newQuestion">
+            <MenuItem component={Link} to="/add">
               <IconButton aria-label="new question page" color="inherit">
                 <AddCircleIcon />
               </IconButton>

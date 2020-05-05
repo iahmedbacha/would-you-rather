@@ -17,7 +17,7 @@ function Game(props) {
     <div>
       <AppBar handleLogout={handleLogout} />
       <Switch>
-        <Route path="/newQuestion">
+        <Route path="/add">
           <NewQuestionContainer />
         </Route>
         <Route path="/leaderboard">

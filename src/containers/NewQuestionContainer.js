@@ -1,8 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { handleAddQuestion } from '../redux/actions/shared';
+import NewQuestion from '../components/NewQuestion';
 
-function NewQuestionContainer() {
-  return <div>New Question</div>;
+function NewQuestionContainer(props) {
+  const newQuestion = (e, optionOneText, optionTwoText) => {
+    e.preventDefault();
+    const { dispatch, authedUser, history } = props;
+    dispatch(
+      handleAddQuestion({ optionOneText, optionTwoText, author: authedUser })
+    );
+    history.push('/home');
+  };
+
+  return <NewQuestion handleNewQuestion={newQuestion} />;
 }
 
 function mapStateToProps({ authedUser }) {
@@ -11,4 +23,4 @@ function mapStateToProps({ authedUser }) {
   };
 }
 
-export default connect(mapStateToProps)(NewQuestionContainer);
+export default withRouter(connect(mapStateToProps)(NewQuestionContainer));

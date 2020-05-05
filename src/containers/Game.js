@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import setAuthedUser from '../redux/actions/authedUser';
 import AppBar from '../components/AppBar';
-import QuestionListContainer from './QuestionListContainer';
+import HomeContainer from './HomeContainer';
 
-class Home extends Component {
+class Game extends Component {
   handleLogout = () => {
     const { dispatch } = this.props;
     dispatch(setAuthedUser(null));
@@ -14,7 +14,7 @@ class Home extends Component {
     return (
       <div>
         <AppBar handleLogout={this.handleLogout} />
-        <QuestionListContainer />
+        <HomeContainer />
       </div>
     );
   }
@@ -26,4 +26,4 @@ function mapStateToProps({ authedUser }) {
   };
 }
 
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps)(Game);

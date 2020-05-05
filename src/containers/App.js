@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { handleInitialData } from '../redux/actions/shared';
 import LoginContainer from './LoginContainer';
-import Home from './Home';
+import Game from './Game';
 
 class App extends Component {
   componentDidMount() {
@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     const { isLoggedIn } = this.props;
     return (
-      <div className="App">{isLoggedIn ? <Home /> : <LoginContainer />}</div>
+      <div className="App">{isLoggedIn ? <Game /> : <LoginContainer />}</div>
     );
   }
 }

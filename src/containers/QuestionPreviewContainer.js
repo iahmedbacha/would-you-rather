@@ -4,13 +4,14 @@ import QuestionPreview from '../components/QuestionPreview';
 
 class QuestionPreviewContainer extends Component {
   render() {
-    return <QuestionPreview />;
+    const { user, question } = this.props;
+    return <QuestionPreview user={user} question={question} />;
   }
 }
 
 function mapStateToProps({ users, questions }, { id }) {
   return {
-    user: users[questions[id].author].name,
+    user: users[questions[id].author],
     question: questions[id],
   };
 }

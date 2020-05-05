@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -92,19 +93,19 @@ export default function PrimarySearchAppBar(props) {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
+      <MenuItem component={Link} to="/home">
         <IconButton aria-label="home page" color="inherit">
           <HomeIcon />
         </IconButton>
         <p>Home</p>
       </MenuItem>
-      <MenuItem>
+      <MenuItem component={Link} to="/newQuestion">
         <IconButton aria-label="new question page" color="inherit">
           <AddCircleIcon />
         </IconButton>
         <p>New Question</p>
       </MenuItem>
-      <MenuItem>
+      <MenuItem component={Link} to="/leaderboard">
         <IconButton aria-label="leaderboard page" color="inherit">
           <ListIcon />
         </IconButton>
@@ -133,19 +134,19 @@ export default function PrimarySearchAppBar(props) {
           </Typography>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <MenuItem>
+            <MenuItem component={Link} to="/home">
               <IconButton aria-label="home page" color="inherit">
                 <HomeIcon />
               </IconButton>
               <p>Home</p>
             </MenuItem>
-            <MenuItem>
+            <MenuItem component={Link} to="/newQuestion">
               <IconButton aria-label="new question page" color="inherit">
                 <AddCircleIcon />
               </IconButton>
               <p>New Question</p>
             </MenuItem>
-            <MenuItem>
+            <MenuItem component={Link} to="/leaderboard">
               <IconButton aria-label="leaderboard page" color="inherit">
                 <ListIcon />
               </IconButton>

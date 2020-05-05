@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import QuestionPreview from '../components/QuestionPreview';
 
-class QuestionPreviewContainer extends Component {
-  render() {
-    const { user, question } = this.props;
-    return <QuestionPreview user={user} question={question} />;
-  }
+function QuestionPreviewContainer(props) {
+  const { user, question } = props;
+  return <QuestionPreview user={user} question={question} />;
 }
 
 function mapStateToProps({ users, questions }, { id }) {

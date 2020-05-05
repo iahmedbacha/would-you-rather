@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
-class NewQuestionContainer extends Component {
-  render() {
-    return <div>New Question</div>;
-  }
+function NewQuestionContainer() {
+  return <div>New Question</div>;
 }
 
 function mapStateToProps({ authedUser }) {

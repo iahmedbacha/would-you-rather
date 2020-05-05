@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
-class UserListContainer extends Component {
-  render() {
-    return <div>User List</div>;
-  }
+function UserListContainer() {
+  return <div>User List</div>;
 }
 
 function mapStateToProps({ users }) {

@@ -1,26 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import Home from '../components/Home';
 import QuestionList from '../components/QuestionList';
 
-class HomeContainer extends Component {
-  render() {
-    const { unAnsweredQuestionsIds, answeredQuestionsIds } = this.props;
-    const unAnsweredQuestions = (
-      <QuestionList questionsIds={unAnsweredQuestionsIds} />
-    );
-    const answeredQuestions = (
-      <QuestionList questionsIds={answeredQuestionsIds} />
-    );
-    return (
-      <div>
-        <Home
-          unAnsweredQuestions={unAnsweredQuestions}
-          answeredQuestions={answeredQuestions}
-        />
-      </div>
-    );
-  }
+function HomeContainer(props) {
+  const { unAnsweredQuestionsIds, answeredQuestionsIds } = props;
+  const unAnsweredQuestions = (
+    <QuestionList questionsIds={unAnsweredQuestionsIds} />
+  );
+  const answeredQuestions = (
+    <QuestionList questionsIds={answeredQuestionsIds} />
+  );
+  return (
+    <div>
+      <Home
+        unAnsweredQuestions={unAnsweredQuestions}
+        answeredQuestions={answeredQuestions}
+      />
+    </div>
+  );
 }
 
 function mapStateToProps({ authedUser, questions }) {

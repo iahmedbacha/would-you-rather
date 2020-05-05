@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
-class LeaderboardContainer extends Component {
-  render() {
-    return <div>Leaderboard</div>;
-  }
+function LeaderboardContainer() {
+  return <div>Leaderboard</div>;
 }
 
 function mapStateToProps({ authedUser }) {

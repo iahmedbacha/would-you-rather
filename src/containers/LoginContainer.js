@@ -1,21 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import Login from '../components/Login';
 import setAuthedUser from '../redux/actions/authedUser';
 
-class LoginContainer extends Component {
-  login = (e, id) => {
+function LoginContainer(props) {
+  const login = (e, id) => {
     e.preventDefault();
-    const { dispatch } = this.props;
+    const { dispatch } = props;
     if (id !== '') {
       dispatch(setAuthedUser(id));
     }
   };
 
-  render() {
-    const { users } = this.props;
-    return <Login handleLogin={this.login} users={users} />;
-  }
+  const { users } = props;
+  return <Login handleLogin={login} users={users} />;
 }
 
 function mapStateToProps({ users }) {

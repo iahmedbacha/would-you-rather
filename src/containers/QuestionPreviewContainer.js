@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import QuestionPreview from '../components/QuestionPreview';
 
 class QuestionPreviewContainer extends Component {
   render() {
-    return <div>Question Preview</div>;
+    return <QuestionPreview />;
   }
 }
 

@@ -173,7 +173,7 @@ export default function PrimarySearchAppBar(props) {
                   className={classes.avatar}
                 />
               </IconButton>
-              <p>{`Hi, ${user.name}`}</p>
+              <p>{`Hello, ${user.name}`}</p>
             </MenuItem>
           </div>
           <div className={classes.sectionMobile}>

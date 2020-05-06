@@ -8,10 +8,12 @@ function NewQuestionContainer(props) {
   const newQuestion = (e, optionOneText, optionTwoText) => {
     e.preventDefault();
     const { dispatch, authedUser, history } = props;
-    dispatch(
-      handleAddQuestion({ optionOneText, optionTwoText, author: authedUser })
-    );
-    history.push('/home');
+    if (optionOneText !== '' && optionTwoText !== '') {
+      dispatch(
+        handleAddQuestion({ optionOneText, optionTwoText, author: authedUser })
+      );
+      history.push('/home');
+    }
   };
 
   return <NewQuestion handleNewQuestion={newQuestion} />;

@@ -105,3 +105,5 @@ Form inputs and controlled components may have some state handled by the compone
 Reducers and actions are written properly and correctly return updated state to the store.
 - The code is structured and organized in a logical way.
 Components are modular and reusable.
+## Licence
+GNU General Public License v3.0

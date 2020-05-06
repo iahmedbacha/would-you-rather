@@ -76,9 +76,6 @@ export default function NewQuestion(props) {
                   onChange={handleOptionOneTextChange}
                 />
               </Grid>
-              <Typography component="h2" variant="body2">
-                Or
-              </Typography>
               <Grid item xs={12}>
                 <TextField
                   autoComplete="optionTwo"

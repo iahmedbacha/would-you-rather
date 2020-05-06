@@ -6,6 +6,7 @@ import AppBar from '../components/AppBar';
 import HomeContainer from './HomeContainer';
 import NewQuestionContainer from './NewQuestionContainer';
 import UserListContainer from './UserListContainer';
+import Poll from '../components/Poll';
 
 function Game(props) {
   const handleLogout = () => {
@@ -24,6 +25,9 @@ function Game(props) {
         </Route>
         <Route path="/leaderboard">
           <UserListContainer />
+        </Route>
+        <Route path="/questions/:questionId">
+          <Poll />
         </Route>
         <Route path="/">
           <HomeContainer />

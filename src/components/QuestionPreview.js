@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -43,7 +44,14 @@ export default function QuestionPreview(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" fullWidth>
+        <Button
+          size="small"
+          color="primary"
+          variant="outlined"
+          fullWidth
+          component={Link}
+          to={`/questions/${question.id}`}
+        >
           View Poll
         </Button>
       </CardActions>

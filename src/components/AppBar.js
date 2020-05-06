@@ -6,9 +6,9 @@ import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
+import Avatar from '@material-ui/core/Avatar';
 import Menu from '@material-ui/core/Menu';
 import HomeIcon from '@material-ui/icons/Home';
-import AccountCircle from '@material-ui/icons/AccountCircle';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import ListIcon from '@material-ui/icons/List';
@@ -37,6 +37,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('md')]: {
       display: 'none',
     },
+  },
+  avatar: {
+    height: 20,
+    width: 20,
   },
 }));
 
@@ -118,7 +122,11 @@ export default function PrimarySearchAppBar(props) {
           aria-haspopup="true"
           color="inherit"
         >
-          <AccountCircle />
+          <Avatar
+            alt="Remy Sharp"
+            src={user.avatarURL}
+            className={classes.avatar}
+          />
         </IconButton>
         <p>Profile</p>
       </MenuItem>
@@ -159,7 +167,11 @@ export default function PrimarySearchAppBar(props) {
                 aria-haspopup="true"
                 color="inherit"
               >
-                <AccountCircle />
+                <Avatar
+                  alt="Remy Sharp"
+                  src={user.avatarURL}
+                  className={classes.avatar}
+                />
               </IconButton>
               <p>{`Hi, ${user.name}`}</p>
             </MenuItem>

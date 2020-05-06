@@ -1,8 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import User from '../components/User';
 
-function UserContainer() {
-  return <div>User</div>;
+function UserContainer(props) {
+  const { user } = props;
+  return <User user={user} />;
 }
 
 function mapStateToProps({ users }, { id }) {

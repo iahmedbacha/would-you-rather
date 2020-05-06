@@ -65,7 +65,7 @@ export default function PrimarySearchAppBar(props) {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
-  const { handleLogout } = props;
+  const { handleLogout, user } = props;
 
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
@@ -161,7 +161,7 @@ export default function PrimarySearchAppBar(props) {
               >
                 <AccountCircle />
               </IconButton>
-              <p>Hi, Sarah Edo</p>
+              <p>{`Hi, ${user.name}`}</p>
             </MenuItem>
           </div>
           <div className={classes.sectionMobile}>

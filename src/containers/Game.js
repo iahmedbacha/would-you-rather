@@ -5,7 +5,7 @@ import setAuthedUser from '../redux/actions/authedUser';
 import AppBar from '../components/AppBar';
 import HomeContainer from './HomeContainer';
 import NewQuestionContainer from './NewQuestionContainer';
-import LeaderboardContainer from './LeaderboardContainer';
+import UserListContainer from './UserListContainer';
 
 function Game(props) {
   const handleLogout = () => {
@@ -13,15 +13,17 @@ function Game(props) {
     dispatch(setAuthedUser(null));
   };
 
+  const { user } = props;
+
   return (
     <div>
-      <AppBar handleLogout={handleLogout} />
+      <AppBar handleLogout={handleLogout} user={user} />
       <Switch>
         <Route path="/add">
           <NewQuestionContainer />
         </Route>
         <Route path="/leaderboard">
-          <LeaderboardContainer />
+          <UserListContainer />
         </Route>
         <Route path="/">
           <HomeContainer />
@@ -31,9 +33,9 @@ function Game(props) {
   );
 }
 
-function mapStateToProps({ authedUser }) {
+function mapStateToProps({ authedUser, users }) {
   return {
-    authedUser,
+    user: users[authedUser],
   };
 }
 

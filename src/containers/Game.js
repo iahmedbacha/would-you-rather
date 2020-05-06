@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import setAuthedUser from '../redux/actions/authedUser';
 import AppBar from '../components/AppBar';
@@ -10,8 +10,9 @@ import Poll from './PollContainer';
 
 function Game(props) {
   const handleLogout = () => {
-    const { dispatch } = props;
+    const { dispatch, history } = props;
     dispatch(setAuthedUser(null));
+    history.push('/');
   };
 
   const { user } = props;
@@ -43,4 +44,4 @@ function mapStateToProps({ authedUser, users }) {
   };
 }
 
-export default connect(mapStateToProps)(Game);
+export default withRouter(connect(mapStateToProps)(Game));

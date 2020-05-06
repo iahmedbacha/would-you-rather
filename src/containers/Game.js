@@ -6,7 +6,7 @@ import AppBar from '../components/AppBar';
 import HomeContainer from './HomeContainer';
 import NewQuestionContainer from './NewQuestionContainer';
 import UserListContainer from './UserListContainer';
-import Poll from '../components/Poll';
+import Poll from './PollContainer';
 
 function Game(props) {
   const handleLogout = () => {

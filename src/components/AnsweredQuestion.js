@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
   bar: {
     height: 20,
     borderRadius: 3,
+    marginBottom: 5.6,
   },
   option: {
     width: '100%',
@@ -73,7 +74,7 @@ export default function AnsweredQuestion(props) {
       <Typography gutterBottom variant="body1" component="p">
         {`${question.optionOne.votes.length} out of ${
           question.optionOne.votes.length + question.optionTwo.votes.length
-        } votes`}
+        } votes (${(countOne / (countOne + countTwo)) * 100}%)`}
       </Typography>
     </Paper>
   );
@@ -91,7 +92,7 @@ export default function AnsweredQuestion(props) {
       <Typography gutterBottom variant="body1" component="p">
         {`${question.optionTwo.votes.length} out of ${
           question.optionOne.votes.length + question.optionTwo.votes.length
-        } votes`}
+        } votes (${(countTwo / (countOne + countTwo)) * 100}%)`}
       </Typography>
     </Paper>
   );

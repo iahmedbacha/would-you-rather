@@ -74,7 +74,7 @@ export default function AnsweredQuestion(props) {
       <Typography gutterBottom variant="body1" component="p">
         {`${question.optionOne.votes.length} out of ${
           question.optionOne.votes.length + question.optionTwo.votes.length
-        } votes (${(countOne / (countOne + countTwo)) * 100}%)`}
+        } votes (${Math.round((countOne / (countOne + countTwo)) * 100)}%)`}
       </Typography>
     </Paper>
   );
@@ -92,7 +92,7 @@ export default function AnsweredQuestion(props) {
       <Typography gutterBottom variant="body1" component="p">
         {`${question.optionTwo.votes.length} out of ${
           question.optionOne.votes.length + question.optionTwo.votes.length
-        } votes (${(countTwo / (countOne + countTwo)) * 100}%)`}
+        } votes (${Math.round((countTwo / (countOne + countTwo)) * 100)}%)`}
       </Typography>
     </Paper>
   );
